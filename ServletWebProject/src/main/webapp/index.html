@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+</head>
+<body>
+    <h1>Employee Management</h1>
+
+    <h2>Add Employee</h2>
+    <form action="employee" method="post">
+        <input type="hidden" name="action" value="insert">
+        Name: <input type="text" name="name" required><br>
+        Salary: <input type="number" name="salary" required><br>
+        <button type="submit">Add</button>
+    </form>
+
+    <h2>Update Employee</h2>
+    <form action="employee" method="post">
+        <input type="hidden" name="action" value="update">
+        ID: <input type="number" name="id" required><br>
+        Name: <input type="text" name="name" required><br>
+        Salary: <input type="number" name="salary" required><br>
+        <button type="submit">Update</button>
+    </form>
+
+    <h2>Delete Employee</h2>
+    <form action="employee" method="post">
+        <input type="hidden" name="action" value="delete">
+        ID: <input type="number" name="id" required><br>
+        <button type="submit">Delete</button>
+    </form>
+
+    <h2>Select Employee by ID</h2>
+    <form action="employee" method="get">
+        <input type="hidden" name="action" value="selectById">
+        ID: <input type="number" name="id" required><br>
+        <button type="submit">Select</button>
+    </form>
+
+    <h2>Select All Employees</h2>
+    <form action="employee" method="get">
+        <input type="hidden" name="action" value="selectAll">
+        <button type="submit">Show All</button>
+    </form>
+</body>
+</html>
